@@ -12,7 +12,7 @@ class NodeHandler(object):
     Base class for all node handlers.
     """
 
-    def handle(self, node: Node, context: NodeContext):
+    def handle(self, node: Node, context: NodeContext) -> NodeContext:
         """
         Handle the node.
         """
@@ -25,21 +25,21 @@ class NodeHandler(object):
         raise NotImplementedError
 
 
-class TriggerNodeHandler(NodeHandler, ABC):
+class TriggerNodeHandler(NodeHandler):
     """
     Base class for all trigger node handlers.
     """
     pass
 
 
-class ActionNodeHandler(NodeHandler, ABC):
+class ActionNodeHandler(NodeHandler):
     """
     Base class for all action node handlers.
     """
     pass
 
 
-class LogicNodeHandler(NodeHandler, ABC):
+class LogicNodeHandler(NodeHandler):
     """
     Base class for all logic node handlers.
     """

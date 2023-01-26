@@ -38,7 +38,7 @@ class GithubLookupTest(TestCase):
         url = f"https://api.github.com/users/{user}"
         responses.add(responses.GET, url, json={'login': user}, status=200)
         result = GithubLookupNodeHandler().handle(Node(), NodeContext(user='ZhangBohan'))
-        self.assertEqual(result['login'], 'ZhangBohan')
+        self.assertEqual(result['user']['login'], 'ZhangBohan')
 
 
 class NodeTest(TestCase):

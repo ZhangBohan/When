@@ -35,8 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'flow.apps.FlowConfig',
     'django_celery_results',
+    'django_object_actions',
+    'flow.apps.FlowConfig',
 ]
 
 MIDDLEWARE = [
